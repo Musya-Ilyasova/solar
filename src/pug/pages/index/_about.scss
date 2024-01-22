@@ -1,0 +1,38 @@
+.about {
+  display: flex;
+  background: $dark;
+  z-index: 2;
+  &__container {
+    clip-path: polygon(35% 0,100% 0,100% 100%,35% 100%,15% 50%);
+    background: linear-gradient(to top, $darkBlue, $blue);
+    @include mq('768') {
+      clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%,30% 50%);
+    }
+  }
+  &__right {
+    padding: 90px 0 120PX;
+    width: 70%;
+    margin-left: auto;
+  }
+  &__title {
+    margin-top: 60px;
+    margin-left: 15%;
+    @include mq('768') {
+      margin-left: 35%;
+      margin-top: 40px;
+    }
+  }
+  &__text {
+    margin-top: 20px;
+    margin-left: 15%;
+    @include mq('768') {
+      margin-left: 35%;
+    }
+  }
+  .btn {
+    margin-left: 15%;
+    @include mq('768') {
+      margin-left: 35%;
+    }
+  }
+}

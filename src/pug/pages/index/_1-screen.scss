@@ -1,0 +1,95 @@
+// ft-screen
+.ft-screen {
+  width: 100%;
+  color: $white;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid $main;
+  height: 700px;
+  background: linear-gradient(to right, $main, $darkMain);
+
+  @include mq('768') {
+    height: 600px;
+  }
+  @include mq('1280') {
+    height: 700px;
+  }
+  @include mq('1600') {
+    height: 800px;
+  }
+  &:before  {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-image: url(../img/fs-bg3.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    mix-blend-mode: luminosity;
+    z-index: 1;
+    height: 700px;
+    z-index: 0;
+    @include mq('768') {
+      height: 600px;
+      background-position: center;
+    }
+    @include mq('1280') {
+      height: 700px;
+    }
+    @include mq('1600') {
+      height: 800px;
+    }
+    @include mq('1600') {
+      height: 800px;
+    }
+  }
+  &:after {
+    content: "";
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: $dark;
+    position: absolute;
+    z-index: 1;
+  }
+  &__container {
+    background: $dark;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    clip-path: polygon(65% 0,90% 50%,65% 100%,100% 100%,0 100%,0 0);
+    @include mq('768') {
+      clip-path: polygon(50% 0,70% 50%,50% 100%,100% 100%,0 100%,0 0);
+    }
+    @include mq('1280') {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__left {
+    width: 72%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include mq('768') {
+      width: 60%;
+    }
+  }
+
+  &__text {
+    color: white;
+    margin-top: 20px;
+  }
+  &__title {
+    margin-top: 40px;
+  }
+  &__btn {
+    margin-top: 50px;
+  }
+}

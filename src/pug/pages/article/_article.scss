@@ -1,0 +1,39 @@
+.article {
+  main {
+    min-height: 100vh;
+    background: $darkBg;
+    padding-top: 120px;
+  }
+
+  .container {
+    max-width: 1050px;
+    @include mq('1280') {
+      padding: 0 40px;
+    }
+  }
+
+  header .btn{
+    display: none;
+  }
+  p {
+    color: $whiteText;
+    font-size: 20px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+  h1 {
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin: 20px 0;
+    line-height: 1.2;
+  }
+  h3 {
+    font-size: 20px;
+    margin: 20px 0;
+    line-height: 1.2;
+  }
+}

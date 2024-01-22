@@ -1,0 +1,49 @@
+h1 {
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 700;
+  color: $main;
+  @include mq('768') {
+    font-size: $font-size-h1;
+  }
+  @include mq('1600') {
+    font-size: 48px;
+  }
+}
+
+h2, h3 {
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 700;
+  color: $whiteText;
+  @include mq('768') {
+    font-size: $font-size-h2;
+  }
+  @include mq('1600') {
+    font-size: 42px;
+  }
+}
+
+p {
+  color: $dark;
+  line-height: 1.4;
+  font-size: $font-size-main;
+  @include mq('1600') {
+    font-size: 20px;
+  }
+}
+
+a {
+  color: rgba($color: $darkMain, $alpha: 0.7);
+  text-decoration: none;
+  &:hover {
+    color: $darkMain;
+    transition: $transition;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 0;
+}
